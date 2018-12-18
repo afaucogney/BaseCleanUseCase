@@ -1,0 +1,39 @@
+def MOCKITO_VERSION = '2.16.0'
+def MOCKITO_KOTLIN_VERSION = '1.5.0'
+def JUNIT_VERSION = '4.12'
+
+//android {
+//
+//    defaultConfig {
+//       testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+//    }
+//
+//    sourceSets {
+//        test.java.srcDirs += 'src/test/kotlin'
+//        test {
+//            java {
+//                exclude 'com/edf/edfetmoi/transco/broken/*.java'
+//            }
+//        }
+//    }
+//
+//    testOptions {
+//        unitTests.returnDefaultValues = true
+//    }
+//}
+
+dependencies {
+    // Testing
+//    testImplementation "com.android.support:support-annotations:$rootProject.supportVersion"
+    testImplementation "junit:junit:$JUNIT_VERSION"
+    testImplementation("org.assertj:assertj-core:3.11.1")
+
+
+	// Mockito Kotlin
+    testImplementation "com.nhaarman:mockito-kotlin:$MOCKITO_KOTLIN_VERSION"
+    testImplementation "org.mockito:mockito-core:$MOCKITO_VERSION"
+    testImplementation "org.mockito:mockito-inline:$MOCKITO_VERSION"
+
+    // Joda for testing Date wo context
+    testImplementation 'joda-time:joda-time:2.9.9'
+}
