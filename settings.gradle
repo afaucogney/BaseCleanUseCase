@@ -1,1 +1,1 @@
-include ':app', ':CleanUseCase'
+include ':app', ':clean-usecase'
